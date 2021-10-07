@@ -12,12 +12,13 @@ class BlogForm(forms.Form):
 
 class BlogSerializer(serializers.ModelSerializer):
 
-    class Meta:
+
         model = Blog
-        fields = [
-            'id',
-            'image',
-            'title',
-            'description',
-            'hashtags'
-        ]
+        id = serializers.IntegerField(required=True)
+        image = serializers.ImageField(required=True)
+        tittle = serializers.CharField(required=True)
+        description = serializers.CharField(required=True)
+        hashtags = serializers.CharField(required=True)
+        # def validate(self,attrs):
+
+

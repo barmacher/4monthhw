@@ -87,3 +87,4 @@ def create_comment(request,pk):
         text = request.POST['text']
         Comment.objects.create(text=text, blog_id=pk)
         return redirect(f'/blog/{pk}/')
+
